@@ -19,9 +19,9 @@ spreadsheet_id = '1ZqoDoe7IgikzFQ_dr7QR6VHS1mdJV9_4GMCauY9pD8w/edit#gid=0'
 @app.route('/add_data', methods=['POST'])
 def add_data():
     data = {
-        "field1": "value1",
-        "field2": "value2",
-        "field3": "value3"
+        "Name": "value1",
+        "Email": "value2",
+        "Phone": "value3"
     }
     values = [[data['Name'], data['Email'], data['Phone']]]  # Customize based on your data
     body = {'values': values}
