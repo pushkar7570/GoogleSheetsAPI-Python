@@ -18,8 +18,12 @@ spreadsheet_id = '1ZqoDoe7IgikzFQ_dr7QR6VHS1mdJV9_4GMCauY9pD8w/edit#gid=0'
 
 @app.route('/add_data', methods=['POST'])
 def add_data():
-    data = request.json
-    values = [[data['field1'], data['field2'], data['field3']]]  # Customize based on your data
+    data = {
+        "field1": "value1",
+        "field2": "value2",
+        "field3": "value3"
+    }
+    values = [[data['Name'], data['Email'], data['Phone']]]  # Customize based on your data
     body = {'values': values}
     
     result = service.spreadsheets().values().append(spreadsheetId=spreadsheet_id,
