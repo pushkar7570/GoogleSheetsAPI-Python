@@ -2,8 +2,7 @@ from flask import Flask, request, jsonify
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+app = Flask(__name__)
 
 
 # Load credentials from the downloaded JSON file
