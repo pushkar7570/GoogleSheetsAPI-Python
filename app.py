@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-app = Flask(__name__)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
 
 # Load credentials from the downloaded JSON file
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
